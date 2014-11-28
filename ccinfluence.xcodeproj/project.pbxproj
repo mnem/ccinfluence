@@ -30,6 +30,9 @@
 		BB5534A11A28979E0066D9CA /* influence_map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = influence_map.cpp; sourceTree = "<group>"; };
 		BB5534A21A28979E0066D9CA /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		BB5534A51A2898090066D9CA /* test_influence_map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_influence_map.cpp; sourceTree = "<group>"; };
+		BB5534A71A289B250066D9CA /* influence_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = influence_map.h; sourceTree = "<group>"; };
+		BB5534A81A28A0A60066D9CA /* influence_map.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = influence_map.inl; sourceTree = "<group>"; };
+		BB5534A91A28CD310066D9CA /* xassert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xassert.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +67,11 @@
 			children = (
 				BB5534A01A28979E0066D9CA /* catch.hpp */,
 				BB5534A11A28979E0066D9CA /* influence_map.cpp */,
+				BB5534A71A289B250066D9CA /* influence_map.h */,
+				BB5534A81A28A0A60066D9CA /* influence_map.inl */,
 				BB5534A21A28979E0066D9CA /* main.cpp */,
 				BB5534A51A2898090066D9CA /* test_influence_map.cpp */,
+				BB5534A91A28CD310066D9CA /* xassert.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
