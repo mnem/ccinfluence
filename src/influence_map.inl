@@ -43,7 +43,7 @@ namespace influence_map {
 
     inline void InfluenceMap::set_influence(const size_t x, const size_t y, const float influence)
     {
-        _data[coords_to_linear(x, y)] = influence;
+        _data[coords_to_linear(x, y)] = clamp_influence(influence);
     }
     
 } // namespace influence_map

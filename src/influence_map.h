@@ -7,6 +7,19 @@ namespace influence_map {
     class InfluenceMap
     {
     public:
+        enum ConnectionIndex {
+            TopLeft     = 0,
+            TopMiddle   = 1,
+            TopRight    = 2,
+            MiddleLeft  = 7,
+            MiddleRight = 3,
+            BottomLeft  = 6,
+            BottomMiddle= 5,
+            BottomRight = 4
+        };
+        
+        static const size_t CONNECTIONS_ARRAY_LENGTH = 8;
+        
         InfluenceMap(const size_t width, const size_t height, const bool clamp_values_to_0_1, const float initial_influence);
         InfluenceMap(const InfluenceMap&) = delete;
         InfluenceMap& operator=(const InfluenceMap&) = delete;
@@ -31,7 +44,11 @@ namespace influence_map {
          * Each influence value is multiplied by influence_weight before being stored.
          * This does not affect the values in the source cells.
          */
-        void connections(const size_t x, const size_t, float * const connections_array, const float influence_weight, const float out_of_bounds_value) const;
+        void connections(const size_t x,
+                         const size_t y,
+                         float * const connections_array,
+                         const float influence_weight,
+                         const float out_of_bounds_value) const;
         
         /**
          * Similar to connections(), this fills the connections_array (which must be at least 8 floats in size)
@@ -41,7 +58,10 @@ namespace influence_map {
          *
          * Unlike the connections() function, out of bounds cells are simply ignored.
          */
-        void add_connections(const size_t x, const size_t, float * const connections_array, const float influence_weight) const;
+        void add_connections(const size_t x,
+                             const size_t y,
+                             float * const connections_array,
+                             const float influence_weight) const;
 
         void propagate(const float momentum, const float decay);
         
