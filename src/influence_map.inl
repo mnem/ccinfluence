@@ -36,6 +36,11 @@ namespace influence_map {
         return _height;
     }
 
+    inline bool InfluenceMap::values_clamped() const
+    {
+        return _clamp_values_to_0_1;
+    }
+
     inline float InfluenceMap::influence(const size_t x, const size_t y) const
     {
         return _data[coords_to_linear(x, y)];

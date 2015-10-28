@@ -28,6 +28,7 @@ namespace influence_map {
         size_t num_cells() const;
         size_t width() const;
         size_t height() const;
+        bool values_clamped() const;
         
         float influence(const size_t x, const size_t y) const;
         void set_influence(const size_t x, const size_t y, const float influence);
